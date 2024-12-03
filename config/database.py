@@ -14,7 +14,7 @@ class Settings(BaseSettings):
 def load_settings():
     env = os.getenv("ENV")
 
-    if env == "PRODUCTION":
+    if env == "prod":
         Settings.Config.env_file = ".env.prod"
     else:
         Settings.Config.env_file = ".env.dev"
